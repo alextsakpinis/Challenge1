@@ -6,6 +6,7 @@ query : the asked query function. Takes the asked string as parameter (see state
 def query(queryString, text):
     print(text)
     #Get the proper arguments in the string
+    #Remove useless characters
     queryString = queryString.replace('[', '')
     queryString = queryString.replace(']', '')
     queryString = queryString.replace(',', ' ')
@@ -21,6 +22,7 @@ def query(queryString, text):
 
     regexString = regexString + args[-1]
     
+    #Find the patterns in the given (input)text
     pattern = re.compile(regexString)
     pattern.findall(text)
     return
