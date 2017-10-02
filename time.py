@@ -18,14 +18,10 @@ for event, element in etree.iterparse('enwiki-20170820-pages-articles-multistrea
     
     text = textTag(element)[0].text            
     
-
     query('"cats" [0,10] "are" [0,10] "to"', text)
     query('"or" [0,10] "or" [0,10] "or"', text)
     query('"when" [15,25] "republic" [15,25] "along"', text) 
-    
-
-           
-         
+        
     element.clear()
     while element.getprevious() is not None:
         del element.getparent()[0]
