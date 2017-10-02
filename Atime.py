@@ -16,7 +16,7 @@ textTag = etree.XPath('x:revision/x:text', namespaces = {'x' : 'http://www.media
 #Run trough the whole Wikipeadia file and look at every page tag
 for event, element in etree.iterparse('enwiki-20170820-pages-articles-multistream.xml', events=('end',), tag='{http://www.mediawiki.org/xml/export-0.10/}page'):
     
-    #Only Pages which are starting with "A" or "a" are considered.
+    #Only Pages which title starts with "A" or "a" are considered.
     if re.match('[Aa]',title(element)[0].text):
         text = textTag(element)[0].text            
         
