@@ -8,8 +8,6 @@ Created on Tue Sep 26 14:57:08 2017
 from query import query
 from lxml import etree
 
-found = False;
-
 #precompiled xpath queries
 title = etree.XPath('x:title', namespaces = {'x' : 'http://www.mediawiki.org/xml/export-0.10/'})
 textTag = etree.XPath('x:revision/x:text', namespaces = {'x' : 'http://www.mediawiki.org/xml/export-0.10/'})
