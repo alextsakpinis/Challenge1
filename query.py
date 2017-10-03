@@ -1,9 +1,10 @@
 import re
 """
-query : the asked query function. Takes the asked string as parameter (see statement)
+createRegex : create a regex from a query string (as specified in the statement)
+                 Takes the asked string as parameter (see statement)
 """
 
-def query(queryString, text):
+def createRegex(queryString):
     #Get the proper arguments in the string
     #Remove useless characters
     queryString = queryString.replace('[', '')
@@ -21,7 +22,6 @@ def query(queryString, text):
 
     regexString = regexString + args[-1]
     
-    #Find the patterns in the given (input)text
+    #create the pattern matcher
     pattern = re.compile(regexString)
-    pattern.findall(text)
-    return
+    return pattern
