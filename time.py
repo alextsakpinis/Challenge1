@@ -9,7 +9,6 @@ from query import query
 from lxml import etree
 
 #precompiled xpath queries
-title = etree.XPath('x:title', namespaces = {'x' : 'http://www.mediawiki.org/xml/export-0.10/'})
 textTag = etree.XPath('x:revision/x:text', namespaces = {'x' : 'http://www.mediawiki.org/xml/export-0.10/'})
 
 #Run trough the whole Wikipeadia file and look at every page tag
