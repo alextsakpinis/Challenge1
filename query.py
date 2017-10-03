@@ -4,7 +4,6 @@ query : the asked query function. Takes the asked string as parameter (see state
 """
 
 def query(queryString, text):
-    print(text)
     #Get the proper arguments in the string
     #Remove useless characters
     queryString = queryString.replace('[', '')
